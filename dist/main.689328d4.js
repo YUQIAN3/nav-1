@@ -108,11 +108,11 @@ var $siteList = $('.siteList');
 var $lastLi = $siteList.find('li.last');
 var x = localStorage.getItem('x');
 var xObject = JSON.parse(x);
-var hashMap = xObject || [{ logo: 'G',
-  url: 'https://github.com/' }, { logo: 'j',
+var hashMap = xObject || [{ logo: 'G', image: "./images/js.jpg",
+  url: 'https://github.com/' }, { logo: 'j', image: "./images/js.jpg",
   url: 'https://jsbin.com/' }];
 var simplifyUrl = function simplifyUrl(url) {
-  return url.replace('https://', '').replace('http://', '').replace('www', '').replace(/\/.*/, ''); //删除/后面所有的东西
+  return url.replace('https://', '').replace('http://', '').replace('www.', '').replace(/\/.*/, ''); //删除/后面所有的东西
 };
 var render = function render() {
   $siteList.find('li:not(.last)').remove();
@@ -159,4 +159,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.a001a64d.map
+//# sourceMappingURL=main.689328d4.map
