@@ -3,14 +3,14 @@ const $siteList=$('.siteList')
  const x =localStorage.getItem('x')
  const xObject=JSON.parse(x)
 const hashMap=xObject||[
-  {logo:'G',
+  {logo:'G',image:"./images/js.jpg",
   url:'https://github.com/'},
-  {logo:'j',
+  {logo:'j',image:"./images/js.jpg",
   url:'https://jsbin.com/'}
 ]
 const simplifyUrl=(url)=>{
   return  url.replace('https://','').replace('http://','')
-  .replace('www','').replace(/\/.*/,'')//删除/后面所有的东西
+  .replace('www.','').replace(/\/.*/,'')//删除/后面所有的东西
   
 }
 const render=()=>{
